@@ -1,0 +1,50 @@
+{
+    "name": "teakowa/laravel-cloudflare",
+    "type" : "library",
+    "description": "Use the Cloudflare API right from Laravel.",
+    "homepage": "https://github.com/teakowa/laravel-cloudflare",
+    "keywords": [
+        "cloudflare",
+        "laravel",
+        "api"
+    ],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Teakowa",
+            "email": "contact@teakowa.me",
+            "homepage": "https://teakowa.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "cloudflare/sdk": "^1.0",
+        "illuminate/support": "^5.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Teakowa\\Cloudflare\\": "src"
+        },
+        "files" : [
+            "src/helpers.php"
+        ]
+    },
+
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Teakowa\\Cloudflare\\CloudflareServiceProvider"
+            ],
+            "aliases": {
+                "Cloudflare": "Teakowa\\Cloudflare\\Facades\\Cloudflare"
+            }
+        }
+    }
+}
