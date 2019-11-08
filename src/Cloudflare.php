@@ -2,33 +2,31 @@
 
 namespace Teakowa\Cloudflare;
 
+use Cloudflare\API\Adapter\Guzzle as Adapter;
 use Cloudflare\API\Auth\APIKey as Key;
+use Cloudflare\API\Endpoints\AccessRules;
+use Cloudflare\API\Endpoints\Crypto;
+use Cloudflare\API\Endpoints\DNS;
 use Cloudflare\API\Endpoints\FirewallSettings;
+use Cloudflare\API\Endpoints\IPs;
 use Cloudflare\API\Endpoints\LoadBalancers;
 use Cloudflare\API\Endpoints\Membership;
 use Cloudflare\API\Endpoints\Pools;
 use Cloudflare\API\Endpoints\Railgun;
+use Cloudflare\API\Endpoints\SSL;
 use Cloudflare\API\Endpoints\TLS;
 use Cloudflare\API\Endpoints\UARules;
 use Cloudflare\API\Endpoints\User;
 use Cloudflare\API\Endpoints\WAF;
 use Cloudflare\API\Endpoints\ZoneLockdown;
+use Cloudflare\API\Endpoints\Zones;
 use Cloudflare\API\Endpoints\ZoneSettings;
 use Illuminate\Support\Traits\Macroable;
-use Cloudflare\API\Adapter\Guzzle as Adapter;
-use Cloudflare\API\Endpoints\AccessRules;
-use Cloudflare\API\Endpoints\Crypto;
-use Cloudflare\API\Endpoints\SSL;
-use Cloudflare\API\Endpoints\DNS;
-use Cloudflare\API\Endpoints\IPs;
-use Cloudflare\API\Endpoints\Zones;
 
 /**
- * Class Cloudflare
+ * Class Cloudflare.
  *
  * @property \Cloudflare\API\Adapter\Guzzle adapter
- * @package Teakowa\Cloudflare
- *
  */
 class Cloudflare
 {
@@ -39,8 +37,8 @@ class Cloudflare
 
     public function __construct($email, $api)
     {
-        $key        = new Key($email, $api);
-        $this->adapter    = new Adapter($key);
+        $key = new Key($email, $api);
+        $this->adapter = new Adapter($key);
     }
 
     /**
