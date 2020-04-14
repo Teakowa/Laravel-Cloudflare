@@ -35,7 +35,13 @@ final class Cloudflare
     protected $dns;
     protected $ips;
 
-    public function __construct($email, $api)
+    /**
+     * Cloudflare constructor.
+     *
+     * @param string $email
+     * @param string $api
+     */
+    public function __construct(string $email, string $api)
     {
         $key = new Key($email, $api);
         $this->adapter = new Adapter($key);
