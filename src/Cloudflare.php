@@ -117,7 +117,7 @@ final class Cloudflare
      */
     public function rule(): AccessRules
     {
-        return new AccessRules($this->adapter());
+        return new AccessRules($this->adapter);
     }
 
     /**
