@@ -28,7 +28,7 @@ use Illuminate\Support\Traits\Macroable;
  *
  * @property \Cloudflare\API\Adapter\Guzzle adapter
  */
-class Cloudflare
+final class Cloudflare
 {
     use Macroable;
     protected $zone;
