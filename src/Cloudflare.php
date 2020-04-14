@@ -62,7 +62,7 @@ final class Cloudflare
      */
     public function zoneLockdown()
     {
-        return new ZoneLockdown($this->adapter());
+        return new ZoneLockdown($this->adapter);
     }
 
     /**
@@ -70,7 +70,7 @@ final class Cloudflare
      */
     public function zoneSetting()
     {
-        return new ZoneSettings($this->adapter());
+        return new ZoneSettings($this->adapter);
     }
 
     /**
@@ -78,7 +78,7 @@ final class Cloudflare
      */
     public function ip()
     {
-        return new IPs($this->adapter());
+        return new IPs($this->adapter);
     }
 
     /**
@@ -86,7 +86,7 @@ final class Cloudflare
      */
     public function ssl()
     {
-        return new SSL($this->adapter());
+        return new SSL($this->adapter);
     }
 
     /**
@@ -94,7 +94,7 @@ final class Cloudflare
      */
     public function tls()
     {
-        return new TLS($this->adapter());
+        return new TLS($this->adapter);
     }
 
     /**
@@ -102,7 +102,7 @@ final class Cloudflare
      */
     public function crypto()
     {
-        return new Crypto($this->adapter());
+        return new Crypto($this->adapter);
     }
 
     /**
@@ -118,7 +118,7 @@ final class Cloudflare
      */
     public function firewall()
     {
-        return new FirewallSettings($this->adapter());
+        return new FirewallSettings($this->adapter);
     }
 
     /**
@@ -126,7 +126,7 @@ final class Cloudflare
      */
     public function loadBalance()
     {
-        return new LoadBalancers($this->adapter());
+        return new LoadBalancers($this->adapter);
     }
 
     /**
@@ -134,7 +134,7 @@ final class Cloudflare
      */
     public function membership()
     {
-        return new Membership($this->adapter());
+        return new Membership($this->adapter);
     }
 
     /**
@@ -142,7 +142,7 @@ final class Cloudflare
      */
     public function pool()
     {
-        return new Pools($this->adapter());
+        return new Pools($this->adapter);
     }
 
     /**
@@ -150,7 +150,7 @@ final class Cloudflare
      */
     public function railgun()
     {
-        return new Railgun($this->adapter());
+        return new Railgun($this->adapter);
     }
 
     /**
@@ -158,7 +158,7 @@ final class Cloudflare
      */
     public function userAgent()
     {
-        return new UARules($this->adapter());
+        return new UARules($this->adapter);
     }
 
     /**
@@ -166,7 +166,7 @@ final class Cloudflare
      */
     public function user()
     {
-        return new User($this->adapter());
+        return new User($this->adapter);
     }
 
     /**
@@ -174,6 +174,6 @@ final class Cloudflare
      */
     public function waf()
     {
-        return new WAF($this->adapter());
+        return new WAF($this->adapter);
     }
 }
