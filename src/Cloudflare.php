@@ -51,7 +51,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\DNS
      */
-    public function dns()
+    public function dns(): DNS
     {
         return new DNS($this->adapter);
     }
@@ -59,7 +59,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\Zones
      */
-    public function zone()
+    public function zone(): Zones
     {
         return new Zones($this->adapter);
     }
@@ -67,7 +67,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\ZoneLockdown
      */
-    public function zoneLockdown()
+    public function zoneLockdown(): ZoneLockdown
     {
         return new ZoneLockdown($this->adapter);
     }
@@ -75,7 +75,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\ZoneSettings
      */
-    public function zoneSetting()
+    public function zoneSetting(): ZoneSettings
     {
         return new ZoneSettings($this->adapter);
     }
@@ -83,7 +83,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\IPs
      */
-    public function ip()
+    public function ip(): IPs
     {
         return new IPs($this->adapter);
     }
@@ -91,7 +91,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\SSL
      */
-    public function ssl()
+    public function ssl(): SSL
     {
         return new SSL($this->adapter);
     }
@@ -99,7 +99,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\TLS
      */
-    public function tls()
+    public function tls(): TLS
     {
         return new TLS($this->adapter);
     }
@@ -107,7 +107,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\Crypto
      */
-    public function crypto()
+    public function crypto(): Crypto
     {
         return new Crypto($this->adapter);
     }
@@ -115,7 +115,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\AccessRules
      */
-    public function rule()
+    public function rule(): AccessRules
     {
         return new AccessRules($this->adapter());
     }
@@ -123,7 +123,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\FirewallSettings
      */
-    public function firewall()
+    public function firewall(): FirewallSettings
     {
         return new FirewallSettings($this->adapter);
     }
@@ -131,7 +131,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\LoadBalancers
      */
-    public function loadBalance()
+    public function loadBalance(): LoadBalancers
     {
         return new LoadBalancers($this->adapter);
     }
@@ -139,7 +139,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\Membership
      */
-    public function membership()
+    public function membership(): Membership
     {
         return new Membership($this->adapter);
     }
@@ -147,7 +147,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\Pools
      */
-    public function pool()
+    public function pool(): Pools
     {
         return new Pools($this->adapter);
     }
@@ -155,7 +155,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\Railgun
      */
-    public function railgun()
+    public function railgun(): Railgun
     {
         return new Railgun($this->adapter);
     }
@@ -163,7 +163,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\UARules
      */
-    public function userAgent()
+    public function userAgent(): UARules
     {
         return new UARules($this->adapter);
     }
@@ -171,7 +171,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\User
      */
-    public function user()
+    public function user(): User
     {
         return new User($this->adapter);
     }
@@ -179,7 +179,7 @@ final class Cloudflare
     /**
      * @return \Cloudflare\API\Endpoints\WAF
      */
-    public function waf()
+    public function waf(): WAF
     {
         return new WAF($this->adapter);
     }
