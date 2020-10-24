@@ -1,6 +1,6 @@
 <?php
 
-if (!function_exists('cloudflare')) {
+if (! function_exists('cloudflare')) {
     /**
      * Helper to easy load an cloudflare method or the api.
      *
